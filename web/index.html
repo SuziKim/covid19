@@ -68,8 +68,8 @@
   <p class="w-full mx-auto text-center text-red-600 text-5xl font-bold">4단계</p>
 
   <div class="container mx-auto w-3/4 my-4 p-10 bg-yellow-100 rounded-xl shadow-xl text-left">
-    <h1><span class="text-2xl font-bold text-blue-700">[교학부총장 서신] KAIST 코로나19 방역수칙 4단계에 준하는 정책 유지 (9월6일부터 별도 안내시까지)</span></h1>
-    <blockquote class="mt-3 break-all">
+    <h1><button class="text-2xl font-bold text-blue-700 text-left" onclick="toggle_contents('guide-blockquote');">> [교학부총장 서신] KAIST 코로나19 방역수칙 4단계에 준하는 정책 유지 (9월6일부터 별도 안내시까지)</span></h1>
+    <blockquote id="guide-blockquote" class="hidden mt-3 break-all">
       <p class="text-md text-gray-500">
         존경하는 KAIST 가족 여러분께<br><br>      
         
@@ -86,6 +86,72 @@
         감사합니다.<br>        
         2021. 9. 6. 교학부총장 이승섭 드림
       </p>
+    </blockquote>
+  </div>
+
+  <div class="container mx-auto w-3/4 my-4 p-10 bg-yellow-100 rounded-xl shadow-xl text-left">
+    <h1><button class="text-2xl font-bold text-blue-700 text-left" onclick="toggle_contents('guideline-blockquote');">> 4단계 방역수칙</span></h1>
+    <blockquote id="guideline-blockquote" class="hidden mt-3 break-all">
+      <div class="table border text-md text-gray-500">
+      <div class="table-row-group">
+        <div class="table-row">
+          <div class="table-cell border border-gray-400 w-32 font-bold">구분</div>
+          <div class="table-cell border border-gray-400">4단계</div>
+        </div>
+      
+        <div class="table-row">
+          <div class="table-cell border border-gray-400 w-32 font-bold">단계 명칭</div>
+          <div class="table-cell border border-gray-400">대유행/외출 금지</div>
+        </div>
+      
+        <div class="table-row">
+          <div class="table-cell border border-gray-400 w-32 font-bold">기준</div>
+          <div class="table-cell border border-gray-400">▪인구 10만명당 4명 이상<br>(주간 평균이 3일 이상<br>기준 초과)<br>▸전국: 2,000명 이상<br>▸수도권: 1,000명 이상<br>▸대전: 59명
+            이상</div>
+        </div>
+      
+        <div class="table-row">
+          <div class="table-cell border border-gray-400 w-32 font-bold">모임</div>
+          <div class="table-cell border border-gray-400">▪18시 이후 2명까지 모임 가<br>능<br>(3인 이상 사적모임 금지)<br>* 18시 이전에는<br>4인까지 모임 가능<br>▸18시 이전 4명
+            이하<br>▸18시 이후 2명 이하<br>▸외부
+            다중이용시설 이용<br>자제<br>▸고위험 시설1) 이용 금지</div>
+        </div>
+      
+        <div class="table-row">
+          <div class="table-cell border border-gray-400 w-32 font-bold">행사/회의</div>
+          <div class="table-cell border border-gray-400">▪행사 금지
+            ▸국제회의/학술행사만
+            50인 미만 거리두기
+            유지(좌석 간 두 칸
+            띄우기 또는 2m 거리
+            두기)하며 가능
+            ▸공적인 모임2)도 금지
+            ▸비대면 전환 원칙
+            ▸비대면 전환 및 연기가
+            불가능한 내부 회의의
+            경우, 20명 미만 거리
+            두기 유지 (좌석 간 두
+            칸 띄우기 또는 2m
+            거리두기) ▸국제회의/학술행사는
+            대응팀에 신고, 승인</div>
+        </div>
+      
+        <div class="table-row">
+          <div class="table-cell border border-gray-400 w-32 font-bold">수업</div>
+          <div class="table-cell border border-gray-400">▪비대면 강의 원칙, 일부 과목에 한해 대면 강의 가능
+            ▸전면 비대면</div>
+        </div>
+      
+        <div class="table-row">
+          <div class="table-cell border border-gray-400 w-32 font-bold">시험</div>
+          <div class="table-cell border border-gray-400">
+            ▪방역수칙 준수
+            ▪수험생 간 1.5m 이상 거리두기 유지하도록 좌석 배치, 대기자 공간 관리
+            ▪시험 관계자, 응시자 외 시험장 출입 통제
+            ▪비대면 전환 원칙, 비대면이 불가능할 경우 상기 정부 기준 적용
+          </div>
+        </div>
+      </div>
     </blockquote>
   </div>
 </section>
@@ -603,6 +669,15 @@
     var scrollpos = window.scrollY;
     setBarColor(scrollpos > 10);
   });
+
+  function toggle_contents(object_id) {
+    let x = document.getElementById(object_id);
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
 </script>
 </body>
 
